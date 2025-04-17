@@ -6,6 +6,7 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -34,7 +35,7 @@ public class PartnerOnboardingPage
 	// Method for Business Details
 	public void enterBusinessDetails() throws InterruptedException 
 	{
-		driver.findElement(By.xpath("//input[@formcontrolname=\"partnerName\"]")).sendKeys("saee Travels");
+		driver.findElement(By.xpath("//input[@formcontrolname=\"partnerName\"]")).sendKeys("Tours and Travel-17-04-25");
 		driver.findElement(By.xpath("//input[@placeholder=\"Enter Proprietor Name\"]")).sendKeys("Abc");
 		driver.findElement(By.xpath("(//input[@formcontrolname=\"address\"])[1]")).sendKeys("Mg Road");
 		driver.findElement(By.xpath("(//input[@formcontrolname=\"pinCode\"])[1]")).sendKeys("400005");
@@ -46,7 +47,7 @@ public class PartnerOnboardingPage
 
 		Thread.sleep(2000);
 
-		driver.findElement(By.xpath("//input[@name=\"email\"]")).sendKeys("quowaluffummo-4870@yopmail.com");
+		driver.findElement(By.xpath("//input[@name=\"email\"]")).sendKeys("jogijegrobo-9871@yopmail.com");
 
 		Thread.sleep(2000);
 
@@ -218,12 +219,17 @@ public class PartnerOnboardingPage
 		JavascriptExecutor js13 = (JavascriptExecutor) driver;
 		js13.executeScript("arguments[0].click();", NonReferraltoggle);
 		Thread.sleep(5000);
-		/*
+		
 		WebElement Submit = driver.findElement(By.xpath("//button[text()=\"SUBMIT\"]"));
 		JavascriptExecutor js11 = (JavascriptExecutor) driver;
 		js11.executeScript("arguments[0].click();", Submit);
 		Thread.sleep(3000);
-		*/
+		
+		driver.findElement(By.id("popupButton")).click(); // Replace with your actual element
+        Alert alert = driver.switchTo().alert();
+        String alertMessage = alert.getText();
+        System.out.println("Popup message is: " + alertMessage);
+		
 		
 	}
 		//Refferal Details

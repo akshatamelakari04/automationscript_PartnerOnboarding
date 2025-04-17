@@ -17,7 +17,7 @@ public class LoginPage
         driver.get("http://65.0.79.228:4200/");
         
         // Log-in as Asego User
-        driver.findElement(By.xpath("//input[@type=\"email\"]")).sendKeys("saee.sawant@asego.in");
+        driver.findElement(By.xpath("//input[@type=\"email\"]")).sendKeys("patel.hardik@asego.in");
         driver.findElement(By.xpath("//input[@type=\"password\"]")).sendKeys("admin");
         driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
         
